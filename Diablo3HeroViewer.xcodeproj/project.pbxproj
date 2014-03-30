@@ -21,7 +21,6 @@
 		AD8713A518E73DEE00B1E51E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD87138718E73DEE00B1E51E /* UIKit.framework */; };
 		AD8713AD18E73DEE00B1E51E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD8713AB18E73DEE00B1E51E /* InfoPlist.strings */; };
 		AD8713AF18E73DEE00B1E51E /* Diablo3HeroViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8713AE18E73DEE00B1E51E /* Diablo3HeroViewerTests.m */; };
-		AD8713D818E7985300B1E51E /* Diablo3Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8713D718E7985300B1E51E /* Diablo3Hero.m */; };
 		AD8713DD18E7987000B1E51E /* HeroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8713DA18E7987000B1E51E /* HeroCell.m */; };
 		AD8713DE18E7987000B1E51E /* HeroListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8713DC18E7987000B1E51E /* HeroListViewController.m */; };
 		AD8713EA18E798A000B1E51E /* barbarian0.ico in Resources */ = {isa = PBXBuildFile; fileRef = AD8713E018E798A000B1E51E /* barbarian0.ico */; };
@@ -68,8 +67,6 @@
 		AD8713AA18E73DEE00B1E51E /* Diablo3HeroViewerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Diablo3HeroViewerTests-Info.plist"; sourceTree = "<group>"; };
 		AD8713AC18E73DEE00B1E51E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AD8713AE18E73DEE00B1E51E /* Diablo3HeroViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Diablo3HeroViewerTests.m; sourceTree = "<group>"; };
-		AD8713D618E7985300B1E51E /* Diablo3Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Diablo3Hero.h; sourceTree = "<group>"; };
-		AD8713D718E7985300B1E51E /* Diablo3Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Diablo3Hero.m; sourceTree = "<group>"; };
 		AD8713D918E7987000B1E51E /* HeroCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroCell.h; sourceTree = "<group>"; };
 		AD8713DA18E7987000B1E51E /* HeroCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroCell.m; sourceTree = "<group>"; };
 		AD8713DB18E7987000B1E51E /* HeroListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroListViewController.h; sourceTree = "<group>"; };
@@ -151,8 +148,6 @@
 				AD87139218E73DEE00B1E51E /* AppDelegate.h */,
 				AD87139318E73DEE00B1E51E /* AppDelegate.m */,
 				AD87139518E73DEE00B1E51E /* Main.storyboard */,
-				AD8713D618E7985300B1E51E /* Diablo3Hero.h */,
-				AD8713D718E7985300B1E51E /* Diablo3Hero.m */,
 				AD8713D918E7987000B1E51E /* HeroCell.h */,
 				AD8713DA18E7987000B1E51E /* HeroCell.m */,
 				AD8713DB18E7987000B1E51E /* HeroListViewController.h */,
@@ -335,7 +330,6 @@
 				AD8713DD18E7987000B1E51E /* HeroCell.m in Sources */,
 				AD87139418E73DEE00B1E51E /* AppDelegate.m in Sources */,
 				AD87139018E73DEE00B1E51E /* main.m in Sources */,
-				AD8713D818E7985300B1E51E /* Diablo3Hero.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +538,7 @@
 				AD8713B418E73DEE00B1E51E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD8713B518E73DEE00B1E51E /* Build configuration list for PBXNativeTarget "Diablo3HeroViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +547,7 @@
 				AD8713B718E73DEE00B1E51E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

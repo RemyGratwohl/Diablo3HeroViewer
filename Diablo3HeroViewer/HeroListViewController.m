@@ -7,7 +7,6 @@
 //
 
 #import "HeroListViewController.h"
-#import "Diablo3Hero.h"
 #import "HeroCell.h"
 
 @interface HeroListViewController (){
@@ -40,11 +39,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)backButtonPressed:(id)sender {
-    NSLog(@"SUCCESS!");
-}
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -60,12 +55,11 @@
 {
     HeroCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    Diablo3Hero *object = _objects[indexPath.row];
-    
-    cell.nameLabel.text = [object name];
-    cell.classLabel.text = [object classType];
-    cell.classPortrait.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@%@.ico",[object classType],[object gender]]];
-    cell.levelLabel.text = [NSString stringWithFormat:@"%@",[object level]];
+    NSDictionary *object = _objects[indexPath.row];
+    cell.nameLabel.text = object[@"name"];
+    cell.classLabel.text = object[@"class"];
+    cell.classPortrait.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@%@.ico",object[@"class"],object[@"gender"]]];
+    cell.levelLabel.text = [NSString stringWithFormat:@"%@",object[@"level"]];
 
     return cell;
 }
@@ -76,25 +70,21 @@
     
     if(data[@"code"]){
         NSLog(@"Profile Not Found");
+        //[self.navigationController popViewControllerAnimated:YES];
         return;
     }
     
     NSMutableArray *newArray = [NSMutableArray arrayWithArray:_objects];
     
-    //Retrieves the heroes
+    //Retrieves the heroe Dictionaries
     for(NSDictionary *item in data[@"heroes"]){
-        Diablo3Hero *newHero = [[Diablo3Hero alloc] init];
-        [newHero setName:[item objectForKey:@"name"]];
-        [newHero setLevel:[item objectForKey:@"level"]];
-        [newHero setClassType:[item objectForKey:@"class"]];
-        [newHero setGender:[item objectForKey:@"gender"]];
-        [newArray addObject:newHero];
+        [newArray addObject:item];
     }
     
     //Replace the model with new Objects sorted by name
     _objects = [newArray sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2){
-        NSString *firstHeroName =[(Diablo3Hero*)obj1 name];
-        NSString *secondHeroName =[(Diablo3Hero*)obj2 name];
+        NSString *firstHeroName = obj1[@"name"];
+        NSString *secondHeroName = obj2[@"name"];
         return[firstHeroName compare: secondHeroName];
     }];
     

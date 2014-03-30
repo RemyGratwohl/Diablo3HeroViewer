@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "HeroListViewController.h"
-#import "Diablo3Hero.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
