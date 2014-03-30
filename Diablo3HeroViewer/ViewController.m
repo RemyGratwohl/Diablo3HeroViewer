@@ -48,11 +48,4 @@
         [self.idTextBox setText:@""];
     }
 }
-
-
-- (IBAction)loadButtonPressed:(id)sender {
-    //[self performSegueWithIdentifier:@"HeroListViewSegue" sender:sender];
-}
-
-
 @end

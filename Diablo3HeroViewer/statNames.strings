@@ -1,0 +1,37 @@
+/* 
+  statNames.strings
+  Diablo3HeroViewer
+
+  Created by Remy Gratwohl on 3/30/2014.
+  Copyright (c) 2014 Remy Gratwohl. All rights reserved.
+*/
+
+"life"              = "Life";
+"damage"            = "Damage";
+"attackSpeed"       = "Attack Speed";
+"armor"             = "Armour";
+"strength"          = "Strength";
+"dexterity"         = "Dexterity";
+"vitality"          = "Vitality";
+"intelligence"      = "Intelligence";
+"physicalResist"    = "Physical Resistance";
+"fireResist"        = "Fire Resistance";
+"coldResist"        = "Cold Resistance";
+"lightningResist"   = "Lightning Resistance";
+"poisonResist"      = "Poison Resitance";
+"arcaneResist"      = "Arcane Resistance";
+"critDamage"        = "Crititcal Hit Damage";
+"blockChance"       = "Block Chance";
+"blockAmountMin"    = "Block Amount Minimum";
+"blockAmountMax"    = "Block Amount Maximum";
+"damageIncrease"    = "Damage Increase";
+"critChance"        = "Critical Hit Chance";
+"damageReduction"   = "Damage Reduction";
+"thorns"            = "Thorns";
+"lifeSteal"         = "Lifesteal";
+"lifePerKill"       = "Life Per Kill";
+"goldFind"          = "Gold Find";
+"magicFind"         = "Magic Find";
+"primaryResource"   = "Primary Resources";
+"secondaryResource" = "Secondary Resource";
+"lifeOnHit"         = "Life on Hit";

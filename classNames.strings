@@ -1,0 +1,14 @@
+/* 
+  classNames.strings
+  Diablo3HeroViewer
+
+  Created by Remy Gratwohl on 3/30/2014.
+  Copyright (c) 2014 Remy Gratwohl. All rights reserved.
+*/
+
+"monk" = "Monk";
+"demon-hunter" = "Demon Hunter";
+"barbarian" = "Barbarian";
+"wizard" = "Wizard";
+"witch-doctor" = "Witch Doctor";
+"crusader" = "Crusader";

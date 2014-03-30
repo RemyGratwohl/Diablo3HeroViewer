@@ -8,6 +8,7 @@
 
 #import "HeroListViewController.h"
 #import "HeroCell.h"
+#import "StatsViewController.h"
 
 @interface HeroListViewController (){
     NSArray *_objects;
@@ -29,6 +30,11 @@
 {
     [super viewDidLoad];
     
+    // Initialize StringList
+    NSString *fname = [[NSBundle mainBundle] pathForResource:@"classNames" ofType:@"strings"];
+    self.stringList = [NSDictionary dictionaryWithContentsOfFile:fname];
+    
+    // Fetch Data
     [NSThread detachNewThreadSelector:@selector(getHeroListFrom:) toTarget:self withObject:self.queryUrl];
     
 }
@@ -57,7 +63,8 @@
     
     NSDictionary *object = _objects[indexPath.row];
     cell.nameLabel.text = object[@"name"];
-    cell.classLabel.text = object[@"class"];
+    
+    cell.classLabel.text = [self.stringList objectForKey: object[@"class"]];
     cell.classPortrait.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@%@.ico",object[@"class"],object[@"gender"]]];
     cell.levelLabel.text = [NSString stringWithFormat:@"%@",object[@"level"]];
 
@@ -66,36 +73,40 @@
 
 
 -(void) getHeroListFrom: (NSString *) url{
+    
     NSDictionary *data = [self getDataFrom:url];
     
+    // Return error if the profile was not found
     if(data[@"code"]){
         NSLog(@"Profile Not Found");
-        //[self.navigationController popViewControllerAnimated:YES];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            self.navBar.title = @"Profile Not Found";
+        }];
         return;
     }
     
     NSMutableArray *newArray = [NSMutableArray arrayWithArray:_objects];
     
-    //Retrieves the heroe Dictionaries
+    //  Retrieves the hero Dictionaries
     for(NSDictionary *item in data[@"heroes"]){
         [newArray addObject:item];
     }
     
-    //Replace the model with new Objects sorted by name
+    //  Replace the model with new Objects sorted by name
     _objects = [newArray sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2){
         NSString *firstHeroName = obj1[@"name"];
         NSString *secondHeroName = obj2[@"name"];
         return[firstHeroName compare: secondHeroName];
     }];
     
-    //Reload the data
+    //  When Finished
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [self.tableView reloadData];
     }];
 }
 
 
-//Returns a dictionary from the retrieved JSON object
+//  Returns a dictionary from the retrieved JSON object
 -(NSDictionary*) getDataFrom:(NSString *)url{
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
@@ -116,65 +127,25 @@
     NSError *jError;
     NSDictionary *returnData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&jError];
     
-    //Check for JSON errors
+    //  Check for JSON errors
     if(jError){
         NSLog(@"JSON Error");
         return nil;
-    }else{
-        return returnData;
     }
     
+    return returnData;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
-
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([[segue identifier] isEqualToString:@"loadStats"]){
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSDictionary *object = _objects[indexPath.row];
+        [[segue destinationViewController] setHero:object];
+        [[segue destinationViewController] setQueryUrl:self.queryUrl];
+    }
 }
-
- */
 
 @end

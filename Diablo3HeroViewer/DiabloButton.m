@@ -24,17 +24,13 @@
 - (void)drawRect:(CGRect)rect
 {
     //General Declarations
-    UIColor *color = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
+    UIColor *color = [UIColor colorWithRed:0.33 green:0.33 blue:0.33 alpha:1];
     
     //Drawing the Rounded Rectangle
-    UIBezierPath* roundedRectanglePath = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(0,0,150,30) cornerRadius:6];
+    UIBezierPath* roundedRectanglePath = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(0,0,250,30) cornerRadius:6];
 
     [color setFill];
     [roundedRectanglePath fill];
-    [[UIColor blackColor] setStroke];
-    roundedRectanglePath.lineWidth = 0.5;
-    [roundedRectanglePath stroke];
-    
 }
 
 

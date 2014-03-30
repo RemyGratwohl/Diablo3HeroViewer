@@ -1,17 +1,17 @@
 //
-//  HeroListViewController.h
+//  StatsViewController.h
 //  Diablo3HeroViewer
 //
-//  Created by Remy Gratwohl on 3/29/2014.
+//  Created by Remy Gratwohl on 3/30/2014.
 //  Copyright (c) 2014 Remy Gratwohl. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface HeroListViewController : UITableViewController
+@interface StatsViewController : UITableViewController
 
+@property(strong,nonatomic) NSDictionary *hero;
 @property (strong,nonatomic)  NSString *queryUrl;
 @property(strong,nonatomic) NSDictionary *stringList;
-@property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 
 @end
