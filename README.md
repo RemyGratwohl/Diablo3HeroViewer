@@ -16,11 +16,10 @@ Explored:
 - JSON Parsing
 - http://www.paintcodeapp.com/
 
-Mistakes:
+Issues:
 =
-- UITableViewControllers generally only allows control of the table view, and as such trying to add activity indicators and options bars in an elegant manor seems impossible.
-- Next time, use a single UIView with subviews to add features mentioned above.
-- Abstraction of URLS and Data not elegant
+- UITableViewControllers generally only allows control of the table view, and as such trying to add activity indicators and options bars in an elegant manor seems impossible. Next time, use a single UIView with subviews to add features mentioned above.
+- Abstraction of URLS and Data not very elegant
 - Error Handling not concrete
 
 Screenshots
