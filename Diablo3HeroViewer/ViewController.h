@@ -10,4 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *nameTextBox;
+@property (weak, nonatomic) IBOutlet UITextField *idTextBox;
+@property (weak, nonatomic) IBOutlet UIButton *loadHeroesButton;
+
 @end

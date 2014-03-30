@@ -21,6 +21,21 @@
 		AD8713A518E73DEE00B1E51E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD87138718E73DEE00B1E51E /* UIKit.framework */; };
 		AD8713AD18E73DEE00B1E51E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD8713AB18E73DEE00B1E51E /* InfoPlist.strings */; };
 		AD8713AF18E73DEE00B1E51E /* Diablo3HeroViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8713AE18E73DEE00B1E51E /* Diablo3HeroViewerTests.m */; };
+		AD8713D818E7985300B1E51E /* Diablo3Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8713D718E7985300B1E51E /* Diablo3Hero.m */; };
+		AD8713DD18E7987000B1E51E /* HeroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8713DA18E7987000B1E51E /* HeroCell.m */; };
+		AD8713DE18E7987000B1E51E /* HeroListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8713DC18E7987000B1E51E /* HeroListViewController.m */; };
+		AD8713EA18E798A000B1E51E /* barbarian0.ico in Resources */ = {isa = PBXBuildFile; fileRef = AD8713E018E798A000B1E51E /* barbarian0.ico */; };
+		AD8713EB18E798A000B1E51E /* barbarian1.ico in Resources */ = {isa = PBXBuildFile; fileRef = AD8713E118E798A000B1E51E /* barbarian1.ico */; };
+		AD8713EC18E798A000B1E51E /* demon-hunter0.ico in Resources */ = {isa = PBXBuildFile; fileRef = AD8713E218E798A000B1E51E /* demon-hunter0.ico */; };
+		AD8713ED18E798A000B1E51E /* demon-hunter1.ico in Resources */ = {isa = PBXBuildFile; fileRef = AD8713E318E798A000B1E51E /* demon-hunter1.ico */; };
+		AD8713EE18E798A000B1E51E /* monk0.ico in Resources */ = {isa = PBXBuildFile; fileRef = AD8713E418E798A000B1E51E /* monk0.ico */; };
+		AD8713EF18E798A000B1E51E /* monk1.ico in Resources */ = {isa = PBXBuildFile; fileRef = AD8713E518E798A000B1E51E /* monk1.ico */; };
+		AD8713F018E798A000B1E51E /* witch-doctor1.ico in Resources */ = {isa = PBXBuildFile; fileRef = AD8713E618E798A000B1E51E /* witch-doctor1.ico */; };
+		AD8713F218E798A000B1E51E /* wizard0.ico in Resources */ = {isa = PBXBuildFile; fileRef = AD8713E818E798A000B1E51E /* wizard0.ico */; };
+		AD8713F318E798A000B1E51E /* wizard1.ico in Resources */ = {isa = PBXBuildFile; fileRef = AD8713E918E798A000B1E51E /* wizard1.ico */; };
+		AD8713F518E79C7300B1E51E /* witch-doctor0.ico in Resources */ = {isa = PBXBuildFile; fileRef = AD8713F418E79C7300B1E51E /* witch-doctor0.ico */; };
+		AD8713F818E7A1AA00B1E51E /* backgroundRetina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD8713F718E7A1AA00B1E51E /* backgroundRetina.jpg */; };
+		AD8713FB18E7A71900B1E51E /* DiabloButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8713FA18E7A71900B1E51E /* DiabloButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +68,25 @@
 		AD8713AA18E73DEE00B1E51E /* Diablo3HeroViewerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Diablo3HeroViewerTests-Info.plist"; sourceTree = "<group>"; };
 		AD8713AC18E73DEE00B1E51E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AD8713AE18E73DEE00B1E51E /* Diablo3HeroViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Diablo3HeroViewerTests.m; sourceTree = "<group>"; };
+		AD8713D618E7985300B1E51E /* Diablo3Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Diablo3Hero.h; sourceTree = "<group>"; };
+		AD8713D718E7985300B1E51E /* Diablo3Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Diablo3Hero.m; sourceTree = "<group>"; };
+		AD8713D918E7987000B1E51E /* HeroCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroCell.h; sourceTree = "<group>"; };
+		AD8713DA18E7987000B1E51E /* HeroCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroCell.m; sourceTree = "<group>"; };
+		AD8713DB18E7987000B1E51E /* HeroListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroListViewController.h; sourceTree = "<group>"; };
+		AD8713DC18E7987000B1E51E /* HeroListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroListViewController.m; sourceTree = "<group>"; };
+		AD8713E018E798A000B1E51E /* barbarian0.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = barbarian0.ico; sourceTree = "<group>"; };
+		AD8713E118E798A000B1E51E /* barbarian1.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = barbarian1.ico; sourceTree = "<group>"; };
+		AD8713E218E798A000B1E51E /* demon-hunter0.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = "demon-hunter0.ico"; sourceTree = "<group>"; };
+		AD8713E318E798A000B1E51E /* demon-hunter1.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = "demon-hunter1.ico"; sourceTree = "<group>"; };
+		AD8713E418E798A000B1E51E /* monk0.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = monk0.ico; sourceTree = "<group>"; };
+		AD8713E518E798A000B1E51E /* monk1.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = monk1.ico; sourceTree = "<group>"; };
+		AD8713E618E798A000B1E51E /* witch-doctor1.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = "witch-doctor1.ico"; sourceTree = "<group>"; };
+		AD8713E818E798A000B1E51E /* wizard0.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = wizard0.ico; sourceTree = "<group>"; };
+		AD8713E918E798A000B1E51E /* wizard1.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = wizard1.ico; sourceTree = "<group>"; };
+		AD8713F418E79C7300B1E51E /* witch-doctor0.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = "witch-doctor0.ico"; sourceTree = "<group>"; };
+		AD8713F718E7A1AA00B1E51E /* backgroundRetina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundRetina.jpg; sourceTree = "<group>"; };
+		AD8713F918E7A71900B1E51E /* DiabloButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiabloButton.h; sourceTree = "<group>"; };
+		AD8713FA18E7A71900B1E51E /* DiabloButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiabloButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +146,21 @@
 		AD87138918E73DEE00B1E51E /* Diablo3HeroViewer */ = {
 			isa = PBXGroup;
 			children = (
+				AD8713F618E7A1AA00B1E51E /* Backgrounds */,
+				AD8713DF18E798A000B1E51E /* Icons */,
 				AD87139218E73DEE00B1E51E /* AppDelegate.h */,
 				AD87139318E73DEE00B1E51E /* AppDelegate.m */,
 				AD87139518E73DEE00B1E51E /* Main.storyboard */,
+				AD8713D618E7985300B1E51E /* Diablo3Hero.h */,
+				AD8713D718E7985300B1E51E /* Diablo3Hero.m */,
+				AD8713D918E7987000B1E51E /* HeroCell.h */,
+				AD8713DA18E7987000B1E51E /* HeroCell.m */,
+				AD8713DB18E7987000B1E51E /* HeroListViewController.h */,
+				AD8713DC18E7987000B1E51E /* HeroListViewController.m */,
 				AD87139818E73DEE00B1E51E /* ViewController.h */,
 				AD87139918E73DEE00B1E51E /* ViewController.m */,
+				AD8713F918E7A71900B1E51E /* DiabloButton.h */,
+				AD8713FA18E7A71900B1E51E /* DiabloButton.m */,
 				AD87139B18E73DEE00B1E51E /* Images.xcassets */,
 				AD87138A18E73DEE00B1E51E /* Supporting Files */,
 			);
@@ -150,6 +194,31 @@
 				AD8713AB18E73DEE00B1E51E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD8713DF18E798A000B1E51E /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				AD8713E018E798A000B1E51E /* barbarian0.ico */,
+				AD8713E118E798A000B1E51E /* barbarian1.ico */,
+				AD8713E218E798A000B1E51E /* demon-hunter0.ico */,
+				AD8713E318E798A000B1E51E /* demon-hunter1.ico */,
+				AD8713E418E798A000B1E51E /* monk0.ico */,
+				AD8713E518E798A000B1E51E /* monk1.ico */,
+				AD8713E618E798A000B1E51E /* witch-doctor1.ico */,
+				AD8713F418E79C7300B1E51E /* witch-doctor0.ico */,
+				AD8713E818E798A000B1E51E /* wizard0.ico */,
+				AD8713E918E798A000B1E51E /* wizard1.ico */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		AD8713F618E7A1AA00B1E51E /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				AD8713F718E7A1AA00B1E51E /* backgroundRetina.jpg */,
+			);
+			path = Backgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +297,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD8713EC18E798A000B1E51E /* demon-hunter0.ico in Resources */,
 				AD87139C18E73DEE00B1E51E /* Images.xcassets in Resources */,
+				AD8713F818E7A1AA00B1E51E /* backgroundRetina.jpg in Resources */,
+				AD8713F018E798A000B1E51E /* witch-doctor1.ico in Resources */,
+				AD8713EF18E798A000B1E51E /* monk1.ico in Resources */,
+				AD8713EA18E798A000B1E51E /* barbarian0.ico in Resources */,
+				AD8713EB18E798A000B1E51E /* barbarian1.ico in Resources */,
 				AD87138E18E73DEE00B1E51E /* InfoPlist.strings in Resources */,
+				AD8713ED18E798A000B1E51E /* demon-hunter1.ico in Resources */,
+				AD8713F518E79C7300B1E51E /* witch-doctor0.ico in Resources */,
+				AD8713F218E798A000B1E51E /* wizard0.ico in Resources */,
 				AD87139718E73DEE00B1E51E /* Main.storyboard in Resources */,
+				AD8713EE18E798A000B1E51E /* monk0.ico in Resources */,
+				AD8713F318E798A000B1E51E /* wizard1.ico in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,8 +330,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD87139A18E73DEE00B1E51E /* ViewController.m in Sources */,
+				AD8713DE18E7987000B1E51E /* HeroListViewController.m in Sources */,
+				AD8713FB18E7A71900B1E51E /* DiabloButton.m in Sources */,
+				AD8713DD18E7987000B1E51E /* HeroCell.m in Sources */,
 				AD87139418E73DEE00B1E51E /* AppDelegate.m in Sources */,
 				AD87139018E73DEE00B1E51E /* main.m in Sources */,
+				AD8713D818E7985300B1E51E /* Diablo3Hero.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
