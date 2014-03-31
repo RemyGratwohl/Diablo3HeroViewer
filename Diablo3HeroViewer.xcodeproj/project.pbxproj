@@ -39,8 +39,8 @@
 		AD8EC44218E87BB3005579C5 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8EC44118E87BB3005579C5 /* StatsViewController.m */; };
 		AD8EC44518E88F08005579C5 /* StatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8EC44418E88F08005579C5 /* StatCell.m */; };
 		AD8EC44818E89714005579C5 /* HeroStat.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8EC44718E89714005579C5 /* HeroStat.m */; };
-		AD8EC44A18E89A2A005579C5 /* statNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD8EC44918E89A2A005579C5 /* statNames.strings */; };
-		AD8EC44D18E8A3B1005579C5 /* classNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD8EC44C18E8A3B1005579C5 /* classNames.strings */; };
+		AD933A5B18E8ECDB00853A54 /* classNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD933A5918E8ECDB00853A54 /* classNames.strings */; };
+		AD933A5C18E8ECDB00853A54 /* statNames.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD933A5A18E8ECDB00853A54 /* statNames.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,8 +97,8 @@
 		AD8EC44418E88F08005579C5 /* StatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatCell.m; sourceTree = "<group>"; };
 		AD8EC44618E89714005579C5 /* HeroStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroStat.h; sourceTree = "<group>"; };
 		AD8EC44718E89714005579C5 /* HeroStat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroStat.m; sourceTree = "<group>"; };
-		AD8EC44918E89A2A005579C5 /* statNames.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = statNames.strings; path = Diablo3HeroViewer/statNames.strings; sourceTree = "<group>"; };
-		AD8EC44C18E8A3B1005579C5 /* classNames.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = classNames.strings; sourceTree = "<group>"; };
+		AD933A5918E8ECDB00853A54 /* classNames.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = classNames.strings; path = Diablo3HeroViewer/Resources/classNames.strings; sourceTree = "<group>"; };
+		AD933A5A18E8ECDB00853A54 /* statNames.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = statNames.strings; path = Diablo3HeroViewer/Resources/statNames.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,18 +163,18 @@
 				AD87139218E73DEE00B1E51E /* AppDelegate.h */,
 				AD87139318E73DEE00B1E51E /* AppDelegate.m */,
 				AD87139518E73DEE00B1E51E /* Main.storyboard */,
+				AD87139818E73DEE00B1E51E /* ViewController.h */,
+				AD87139918E73DEE00B1E51E /* ViewController.m */,
+				AD8713DB18E7987000B1E51E /* HeroListViewController.h */,
+				AD8713DC18E7987000B1E51E /* HeroListViewController.m */,
+				AD8EC44018E87BB3005579C5 /* StatsViewController.h */,
+				AD8EC44118E87BB3005579C5 /* StatsViewController.m */,
 				AD8713D918E7987000B1E51E /* HeroCell.h */,
 				AD8713DA18E7987000B1E51E /* HeroCell.m */,
 				AD8EC44318E88F08005579C5 /* StatCell.h */,
 				AD8EC44418E88F08005579C5 /* StatCell.m */,
-				AD8713DB18E7987000B1E51E /* HeroListViewController.h */,
-				AD8713DC18E7987000B1E51E /* HeroListViewController.m */,
 				AD8EC44618E89714005579C5 /* HeroStat.h */,
 				AD8EC44718E89714005579C5 /* HeroStat.m */,
-				AD8EC44018E87BB3005579C5 /* StatsViewController.h */,
-				AD8EC44118E87BB3005579C5 /* StatsViewController.m */,
-				AD87139818E73DEE00B1E51E /* ViewController.h */,
-				AD87139918E73DEE00B1E51E /* ViewController.m */,
 				AD8713F918E7A71900B1E51E /* DiabloButton.h */,
 				AD8713FA18E7A71900B1E51E /* DiabloButton.m */,
 				AD87139B18E73DEE00B1E51E /* Images.xcassets */,
@@ -242,8 +242,8 @@
 		AD8EC44B18E89A3E005579C5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AD8EC44918E89A2A005579C5 /* statNames.strings */,
-				AD8EC44C18E8A3B1005579C5 /* classNames.strings */,
+				AD933A5918E8ECDB00853A54 /* classNames.strings */,
+				AD933A5A18E8ECDB00853A54 /* statNames.strings */,
 			);
 			name = Resources;
 			path = ..;
@@ -325,21 +325,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD933A5C18E8ECDB00853A54 /* statNames.strings in Resources */,
 				AD8EC43F18E8786E005579C5 /* heroCellBackground.jpg in Resources */,
 				AD8713EC18E798A000B1E51E /* demon-hunter0.ico in Resources */,
 				AD87139C18E73DEE00B1E51E /* Images.xcassets in Resources */,
 				AD8713F818E7A1AA00B1E51E /* backgroundRetina.jpg in Resources */,
+				AD933A5B18E8ECDB00853A54 /* classNames.strings in Resources */,
 				AD8713F018E798A000B1E51E /* witch-doctor1.ico in Resources */,
 				AD8713EF18E798A000B1E51E /* monk1.ico in Resources */,
 				AD8713EA18E798A000B1E51E /* barbarian0.ico in Resources */,
 				AD8713EB18E798A000B1E51E /* barbarian1.ico in Resources */,
 				AD87138E18E73DEE00B1E51E /* InfoPlist.strings in Resources */,
-				AD8EC44A18E89A2A005579C5 /* statNames.strings in Resources */,
 				AD8713ED18E798A000B1E51E /* demon-hunter1.ico in Resources */,
 				AD8713F518E79C7300B1E51E /* witch-doctor0.ico in Resources */,
 				AD8713F218E798A000B1E51E /* wizard0.ico in Resources */,
 				AD87139718E73DEE00B1E51E /* Main.storyboard in Resources */,
-				AD8EC44D18E8A3B1005579C5 /* classNames.strings in Resources */,
 				AD8713EE18E798A000B1E51E /* monk0.ico in Resources */,
 				AD8713F318E798A000B1E51E /* wizard1.ico in Resources */,
 			);

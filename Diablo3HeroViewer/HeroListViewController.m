@@ -30,11 +30,11 @@
 {
     [super viewDidLoad];
     
-    // Initialize StringList
+    // Initialize the StringList
     NSString *fname = [[NSBundle mainBundle] pathForResource:@"classNames" ofType:@"strings"];
     self.stringList = [NSDictionary dictionaryWithContentsOfFile:fname];
     
-    // Fetch Data
+    // Fetch The Data on background thread
     [NSThread detachNewThreadSelector:@selector(getHeroListFrom:) toTarget:self withObject:self.queryUrl];
     
 }
@@ -59,11 +59,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // Initialize the Cell
     HeroCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
+
     NSDictionary *object = _objects[indexPath.row];
     cell.nameLabel.text = object[@"name"];
-    
     cell.classLabel.text = [self.stringList objectForKey: object[@"class"]];
     cell.classPortrait.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@%@.ico",object[@"class"],object[@"gender"]]];
     cell.levelLabel.text = [NSString stringWithFormat:@"%@",object[@"level"]];
@@ -74,10 +74,11 @@
 
 -(void) getHeroListFrom: (NSString *) url{
     
+    // Retrieve the data
     NSDictionary *data = [self getDataFrom:url];
     
-    // Return error if the profile was not found
-    if(data[@"code"]){
+    // Validate the data
+    if(data[@"code"] || data == nil){
         NSLog(@"Profile Not Found");
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             self.navBar.title = @"Profile Not Found";
@@ -87,38 +88,38 @@
     
     NSMutableArray *newArray = [NSMutableArray arrayWithArray:_objects];
     
-    //  Retrieves the hero Dictionaries
+    // Retrieve the hero Dictionaries and add them to the new Array
     for(NSDictionary *item in data[@"heroes"]){
         [newArray addObject:item];
     }
     
-    //  Replace the model with new Objects sorted by name
+    // Replace the tableview's model with new objects sorted by name
     _objects = [newArray sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2){
         NSString *firstHeroName = obj1[@"name"];
         NSString *secondHeroName = obj2[@"name"];
         return[firstHeroName compare: secondHeroName];
     }];
     
-    //  When Finished
+    // Reload the tableview on main thread when finished
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [self.tableView reloadData];
     }];
 }
 
 
-//  Returns a dictionary from the retrieved JSON object
+// eturns a dictionary from the retrieved JSON object
 -(NSDictionary*) getDataFrom:(NSString *)url{
     
+    // Created the request and responseCode
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
     [request setURL:[NSURL URLWithString:url]];
-    
     NSHTTPURLResponse *responseCode = nil;
     
     NSError *error = [[NSError alloc] init];
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
     
-    //Check is the response is invalid (ie. 404)
+    // Check is the response is invalid (ie. 404)
     if([responseCode statusCode] != 200){
         NSLog(@"Error retrieving %@, HTTP status code is %i",url,[responseCode statusCode]);
         return nil;
@@ -127,7 +128,7 @@
     NSError *jError;
     NSDictionary *returnData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&jError];
     
-    //  Check for JSON errors
+    // Check for JSON errors
     if(jError){
         NSLog(@"JSON Error");
         return nil;
